@@ -1,0 +1,8 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 3
+  domain: ng.mybluemix.net
+  name: communitiesinfo
+  host: communitiesinfo
+  disk_quota: 1024M

@@ -1,0 +1,50 @@
+
+    <div class="container">
+        <div class="row">
+            <div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{org}}</h3>
+                </div>
+                <div class="panel-body" ng-if="!processing">
+                    <div class="col-lg-6 col-sm-12">
+                        <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+                        </canvas> 
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="type in labels">
+                                    <td>{{ type }}</td>
+                                    <td>{{ info[type] }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total</strong></td>
+                                    <td><strong>{{ total }}</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-body spinner" ng-if="processing">
+                    <img src="./assets/img/loading.gif"/><br>
+                    <span class="glyphicon glyphico\ n-repeat">Loading please wait ...</span>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    
+        
+        <!-- TWEET WRAPPER START -->
+        
+        <!-- TWEET WRAPPER END -->
+
+
